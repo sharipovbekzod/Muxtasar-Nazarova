@@ -134,11 +134,9 @@ async function sendOnce(payload) {
       body: fd,
     });
 
-    if (!resp.ok) {
-      // try to parse body as text/json for debug
-      let text = await resp.text();
-      try { text = JSON.parse(text); } catch (e) {}
-      console.warn("Server returned error:", resp.status, text);
+    const result = await resp.json().catch(() => ({}));
+    if (!resp.ok || result.result !== "success") {
+      console.warn("Server returned error:", resp.status, result);
       return false;
     }
 

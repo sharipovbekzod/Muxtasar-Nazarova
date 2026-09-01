@@ -461,6 +461,7 @@ if (fileInput) {
  * 4) Submit — base64 upload to GAS
  ***********************/
 const paymentForm = document.getElementById("paymentForm");
+const THANK_YOU_DELAY_MS = 2_000;
 
 if (paymentForm) {
   paymentForm.addEventListener("submit", async function (event) {
@@ -561,23 +562,13 @@ if (paymentForm) {
 
       await savePendingSubmission(payload);
 
-      // Chek base64 ko'rinishida katta bo'lishi mumkin. sendBeacon bunday
-      // payloadni (odatda ~64 KB dan kattasini) yubormasdan false qaytaradi.
-      // Shuning uchun redirectdan avval serverning aniq javobini kutamiz.
-      const response = await fetch(SHEET_URL, {
-        method: "POST",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await response.json().catch(() => ({}));
-      if (!response.ok || result.result !== "success") {
-        throw new Error(
-          result.error || `Server xatosi: ${response.status || "noma'lum"}`,
-        );
+      if (submitButton) {
+        submitButton.textContent = "Yuklanmoqda...";
       }
+      // Chek IndexedDB'ga xavfsiz saqlandi. thankYou.js uni fon rejimida
+      // Sheets/Drive'ga yuboradi, shu sabab foydalanuvchi uzoq kutmaydi.
+      await new Promise((resolve) => setTimeout(resolve, THANK_YOU_DELAY_MS));
 
-      await clearPendingSubmission();
       // Reset UI + redirect
       this.reset();
       resetUploadLabel();
