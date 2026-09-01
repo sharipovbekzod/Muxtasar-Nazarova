@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tabriklaymiz</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    .content {
+      max-width: 560px;
+      text-align: center;
+    }
+
+    .check-icon {
+      display: block;
+      width: clamp(220px, 58vw, 320px);
+      height: auto;
+      margin: 0 auto 30px;
+      filter: drop-shadow(0 22px 32px rgba(34, 180, 85, 0.26));
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #4b5563;
+      margin-bottom: 28px;
+    }
+
+    .details-card {
+      background-color: #fbfbfb;
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.16);
+      text-align: left;
+      margin: 0 auto 28px;
+    }
+
+    .detail-row {
+      padding: 10px 0;
+      border-bottom: 1px solid #eeeeee;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      font-weight: 500;
+    }
+
+    .detail-value {
+      font-weight: 500;
+    }
+
+    .detail-date {
+      color: #22b455;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .text-block {
+      font-size: 16px;
+      color: #111827;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .signature {
+      font-size: 16px;
+      font-weight: 500;
+      color: #111827;
+      text-align: left;
+    }
+
+    @media (max-width: 480px) {
+      .details-card {
+        padding: 22px 18px;
+      }
+
+      .title {
+        font-size: 24px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .signature {
+        text-align: center;
+      }
+    }
+    .payment__btn {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  background-color: #399cff;
+  border-radius: 10px;
+  font-family: MontserratSemiBold, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  border: none;
+}
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="content">
+      <!-- Check icon -->
+      <img src="./images/check.avif" alt="Tasdiqlandi" class="check-icon" width="320" height="320" />
+
+      <h1 class="title">TABRIKLAYMIZ!</h1>
+      <p class="subtitle">Xaridingiz muvaffaqiyatli yakunlandi!</p>
+
+      <div class="details-card">
+        <div class="detail-row">
+          <span class="detail-label">Kurs nomi:</span>
+          <span class="detail-value">Rus tili 40 kunda</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Ism:</span>
+          <span class="detail-value ism">—</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Telefon:</span>
+          <span class="detail-value tel">—</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Tarif:</span>
+          <span class="detail-value tarif">—</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">San:</span>
+          <span class="detail-value detail-date san">—</span>
+        </div>
+      </div>
+
+      <div class="details-card">
+        <p class="text-block" style="text-align: center;">
+          Qo’shimcha savollaringiz bo’lsa, biz bilan bog’laning:
+        </p>
+  
+        <a href="https://t.me/dilshoda_kurbonova?text=Assalomu%20alaykum.%0AMen%20%22Rus%20tili%2040%20kunda%22%20kursiga%20yozilmoqchi%20edim." class="payment__btn payment__btn--admin">Adminga yozish</a>
+        <a href="tel:+998917893555"
+          style="background-color: #21BE7B;border-color: #21BE7B; margin-top: 15px; display: flex;"
+          class="payment__btn payment__btn--admin">+998 91 789 35 55</a>
+      </div>
+
+    </div>
+  </div>
+  <script src="./js/thankYou.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../fonts/Montserrat-SemiBold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../fonts/Montserrat-Medium.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MontserratNormal;
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-display: swap;
+}
+/* Subscribe Page Styles */
+.prompt-container {
+  background-color: #e8e8e8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.prompt-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.icon {
+  margin-bottom: 20px;
+}
+
+.promeTitle {
+  font-family: MontserratBold, sans-serif;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.promeTitle > span {
+  color: rgb(14, 178, 133);
+}
+
+.promtText {
+  font-family: MontserratMedium, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#privacyCheckbox {
+  width: 25px;
+  height: 25px;
+  accent-color: #007bff; /* Rangini ham o‘zgartirib bersin */
+}
+.privacy-label > span {
+  color: #ff8461;
+}
+
+.privacy-label {
+  font-size: 13px !important;
+  font-family: MontserratNormal, sans-serif;
+  font-weight: 400;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.subscribe-button {
+  color: white;
+  display: flex;
+  cursor: pointer;
+  background-color: #008ae7;
+  box-shadow: 0px 7px 0px 0px rgba(0, 52, 86, 1);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: MontserratSemibold, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  padding: 26px 63px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 78px;
+  margin-bottom: 27px;
+  text-decoration: none;
+}
+
+.payment {
+  padding-top: 18px;
+  padding-bottom: 76px;
+}
+.payment-container {
+  max-width: 470px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.payment__header {
+  background: linear-gradient(128.56deg, #eff7ff 0%, #d7eaff 100%);
+  border-radius: 15px;
+  padding: 22px;
+  margin-bottom: 21px;
+}
+
+.payment__title {
+  font-family: MontserratBold, sans-serif;
+  color: #2f3463;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+.size-8 {
+  width: 49px;
+  height: 49px;
+}
+
+.payment__tariff {
+  font-family: MontserratNormal, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: #2f3463;
+  margin-bottom: 17px;
+  text-transform: capitalize;
+}
+.payment__price {
+  font-family: MontserratBold, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: #2f3463;
+  margin-bottom: 5px;
+}
+.payment__timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payment__time {
+  font-family: MontserratNormal, sans-serif;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #ff0000;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.payment__timer-label {
+  max-width: 151px;
+  width: 100%;
+  font-family: MontserratMedium, sans-serif;
+  font-size: 14px;
+  color: #2f3463;
+  line-height: 1.5;
+}
+
+.payment__instruction {
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #E6E7EB
+}
+.payment__step {
+  font-family: MontserratNormal, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+.payment__card {
+  background-color: #F6F6F6;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 13px 14px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+      --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.payment__card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment__card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 91px;
+  font-size: 12px;
+  text-align: right;
+  color: #8a8a8a;
+  cursor: pointer;
+  border: none;
+  gap: 2px;
+  background-color: transparent;
+}
+.payment__card-header {
+  padding-bottom: 11px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.payment__card-type {
+  font-family: MontserratMedium;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.uzcard {
+  width: 20px;
+  height: 24px;
+}
+.visa {
+  width: 47px;
+  height: 14px;
+}
+.payment__card-amount {
+  font-family: MontserratNormal, sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.payment__card-number {
+  font-family: MontserratMedium, sans-serif;
+  color: #000000;
+  font-size: 20px;
+}
+
+.payment__card-name {
+  font-family: MontserratMedium, sans-serif;
+  font-size: 15px;
+}
+
+.payment__card--payme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.payme {
+  max-width: 80px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.apelsin {
+  max-width: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.uzumImg {
+  max-width: 170px;
+}
+.payments__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.payme-text {
+  font-family: MontserratNormal, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #00000080;
+}
+
+.radioRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.radioBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 16px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-family: MontserratNormal, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.uploadCheck {
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: MontserratMedium, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px dashed #009FFF;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: #009FFF14;
+  box-shadow: 0px 2px 4px 0px #B6B6B6;
+
+}
+.paymeBtn {
+  max-width: 345px;
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: MontserratSemiBold, Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 30px 30px 30px 30px;
+  background-color: #012425;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+.payment__step {
+  font-family: MontserratMedium, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.payment__confirmation > svg {
+  max-width: 138px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.payment__btn {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  background-color: #399cff;
+  border-radius: 10px;
+  font-family: MontserratSemiBold, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  border: none;
+}
+
+.payment__help {
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #B8B8B8;
+  background-color: #F6F6F6;
+}
+
+.payment__help-text {
+  font-size: 18px;
+  font-family: MontserratRegular, sans-serif;
+  max-width: 256px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-bottom: 23px;
+}
+.payment__btn--admin {
+  background-color: #d1444e;
+  border: 1px solid #d1444e;
+}
+
+.payment__btn--telegram {
+  border: 1px solid #3a9cff;
+}
+.uploadCheck > svg {
+  min-width: 18px;
+}
+
+@media (max-width: 480px) {
+  .radioBox {
+    font-size: 10px;
+  }
+  .main-title {
+    font-size: 22px;
+  }
+  .payment__title {
+    font-size: 17px;
+  }
+  .payment__header {
+    background-color: #d8ebff;
+  }
+  .main {
+    padding-top: 30px;
+  }
+  .payment__card-number {
+    font-size: 16px;
+  }
+  .payment__card-amount {
+    font-size: 18px;
+  }
+  .payment__card-type {
+    font-size: 17px;
+  }
+  .payment__card-name {
+    font-size: 14px;
+  }
+}

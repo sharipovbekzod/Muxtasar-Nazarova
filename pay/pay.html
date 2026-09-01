@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>To'lov Sahifasi</title>
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box }body {font-family: MontserratNormal, sans-serif }.payment {padding: 18px 0 76px }.payment-container {max-width: 470px;margin: 0 auto;padding: 0 16px }.payment__header {background: linear-gradient(128.56deg, #eff7ff 0%, #d7eaff 100%);border-radius: 15px;padding: 22px;margin-bottom: 21px }.payment__title {font-family: MontserratBold, sans-serif;color: #2f3463;font-size: 22px;font-weight: 700;margin-bottom: 9px;text-transform: uppercase }.payment__tariff {font-family: MontserratNormal, sans-serif;font-weight: 400;font-size: 15px;color: #2f3463;margin-bottom: 17px;text-transform: capitalize }.payment__price {font-family: MontserratBold, sans-serif;font-weight: 700;font-size: 26px;color: #2f3463;margin-bottom: 5px }.payment__timer {display: flex;align-items: center;justify-content: space-between }.payment__time {font-family: MontserratNormal, sans-serif;padding: 10px 20px;font-size: 17px;color: #ff0000;background: #fff;border-radius: 10px }.payment__timer-label {max-width: 151px;font-family: MontserratMedium, sans-serif;font-size: 14px;color: #2f3463;line-height: 1.5 }.payment__instruction {padding: 22px 20px 0;border-radius: 20px;margin-bottom: 20px }.payment__step {font-family: MontserratMedium, sans-serif;font-size: 16px;font-weight: 500;color: #000;margin-bottom: 22px }.payment__card {border: 1px solid #e5e7eb;border-radius: 12px;margin-bottom: 20px;padding: 13px 14px 10px;display: flex;flex-direction: column }.payment__card-bottom {display: flex;align-items: center;justify-content: space-between }.payment__card-right {display: flex;flex-direction: column;align-items: center;max-width: 91px;font-size: 12px;color: #8a8a8a;cursor: pointer;border: none;gap: 2px;background: 0 0 }.payment__card-header {padding-bottom: 11px;border-bottom: 1px solid #e5e7eb;margin-bottom: 12px }.payment__card-type {font-family: MontserratMedium, sans-serif;font-size: 20px;font-weight: 500;display: flex;align-items: center;gap: 5px }.uzcard {width: 20px;height: 24px }.visa {width: 47px;height: 14px }.humo {width: 50px }.payment__card-amount {font-family: MontserratNormal, sans-serif;color: #000;font-weight: 700;font-size: 16px }.payment__card-number {font-family: MontserratMedium, sans-serif;color: #000;font-size: 20px }.payment__card-name {font-family: MontserratMedium, sans-serif;font-size: 15px }.radioRow {display: grid;grid-template-columns: 1fr 1fr;align-items: center;gap: 5px;margin-bottom: 20px }.radioBox {display: flex;align-items: center;gap: 5px;padding: 16px 10px;border: 1px solid #e5e7eb;border-radius: 10px;font-family: MontserratNormal, sans-serif;font-size: 16px;font-weight: 400 }.uploadCheck {padding: 20px 16px;display: flex;align-items: center;gap: 10px;font-family: MontserratNormal, sans-serif;font-size: 14px;font-weight: 400;border: 2px dashed #e5e7eb;border-radius: 10px;margin-bottom: 20px;cursor: pointer }.payment__btn {display: flex;justify-content: center;padding: 20px;width: 100%;background: #399cff;border-radius: 10px;font-family: MontserratSemiBold, sans-serif;font-weight: 600;color: #fff;text-decoration: none;transition: all .3s;text-transform: uppercase;border: none }.payment__help {border-radius: 20px;padding: 20px }.payment__help-text {font-size: 18px;font-family: MontserratNormal, sans-serif;max-width: 256px;text-align: center;margin: 0 auto 23px }.payment__btn--admin {background: #d1444e;border: 1px solid #d1444e }@media (max-width:480px) {.payment__title {font-size: 17px }.payment__header {background: #d8ebff }.payment__card-number {font-size: 16px }.payment__card-amount {font-size: 18px }.payment__card-type {font-size: 17px }.payment__card-name {font-size: 14px }}
+    </style>
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+    <div class="payment">
+        <div class="payment-container">
+            <div class="payment__header">
+                <h2 class="payment__title">Rus tili 40 kunda</h2>
+                <div class="payment__tariff">Tarif: Premium</div>
+                <div class="payment__price pricesAll">1 397 000 so'm</div>
+                <div class="payment__timer"><span class="payment__timer-label">To‘lov qilish muddati tugashiga oz
+                        qoldi:</span><span class="payment__time" id="timer">20:00</span></div>
+            </div>
+            <div class="payment__instruction">
+                <p class="payment__step">1. Quyidagi to'lov turlaridan biri orqali to`lovni amalga oshiring</p>
+
+                <!--                
+                <a href="https://payme.uz/fallback/merchant/?id=6577197f7aff6eaacc086cbf"
+                    class="payment__card payment__card--payme mb-0">
+                    <img src="./images/payme.svg" class="payme" alt="" />
+                    <p class="payme-text">To'lovga o'tish</p>
+
+                </a>
+                <br>
+
+                <a href="https://my.click.uz/services/pay?service_id=30967&merchant_id=23168" class="payment__card payment__card--payme">
+                    <img src="./images/click.svg" class="payme" alt="" />
+                    <p class="payme-text">To'lovga o'tish</p>
+                </a>
+                <a href="https://app.paynet.uz/?m=37498" class="payment__card payment__card--payme">
+                    <img src="./images/paynet.png" class="payme" alt="" />
+                    <p class="payme-text">To'lovga o'tish</p>
+                </a> -->
+
+                <div class="payment__card payment__card--uzcard">
+                    <div class="payment__card-header">
+                        <div
+                            style="display: flex;align-items: center;justify-content: space-between;margin-bottom: 10px;">
+                            <span class="payment__card-type">UZCARD<img src="./images/uzcard.webp" alt="uzcard" width="30"
+                                    class="uzcard"></span>
+                        </div>
+                    </div>
+                    <div class="payment__card-bottom">
+                        <div class="payment__card-left">
+                            <div class="payment__card-number">5614 6812 5997 7266</div>
+                            <div class="payment__card-name">SATTAROVA ZILOLAXON</div>
+                        </div>
+                        <button class="payment__card-right copy">
+                            <svg width="50" height="51" viewBox="0 0 50 51" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_21_546" fill="white">
+                                    <path
+                                        d="M0 25.5C0 11.6929 11.1929 0.5 25 0.5V0.5C38.8071 0.5 50 11.6929 50 25.5V25.5C50 39.3071 38.8071 50.5 25 50.5V50.5C11.1929 50.5 0 39.3071 0 25.5V25.5Z">
+                                    </path>
+                                </mask>
+                                <path
+                                    d="M0 25.5C0 11.6929 11.1929 0.5 25 0.5V0.5C38.8071 0.5 50 11.6929 50 25.5V25.5C50 39.3071 38.8071 50.5 25 50.5V50.5C11.1929 50.5 0 39.3071 0 25.5V25.5Z"
+                                    fill="#FAFAFA"></path>
+                                <path
+                                    d="M25 50.5V49.5C11.7452 49.5 1 38.7548 1 25.5H0H-1C-1 39.8594 10.6406 51.5 25 51.5V50.5ZM50 25.5H49C49 38.7548 38.2548 49.5 25 49.5V50.5V51.5C39.3594 51.5 51 39.8594 51 25.5H50ZM25 0.5V1.5C38.2548 1.5 49 12.2452 49 25.5H50H51C51 11.1406 39.3594 -0.5 25 -0.5V0.5ZM25 0.5V-0.5C10.6406 -0.5 -1 11.1406 -1 25.5H0H1C1 12.2452 11.7452 1.5 25 1.5V0.5Z"
+                                    fill="#CCCCCC" mask="url(#path-1-inside-1_21_546)"></path>
+                                <rect x="8" y="11.5" width="36" height="26" rx="13" fill="#EBF2FF"></rect>
+                                <path
+                                    d="M32.9844 33.5V19.4844H22.0156V33.5H32.9844ZM32.9844 17.5156C33.5156 17.5156 33.9844 17.7188 34.3906 18.125C34.7969 18.5 35 18.9531 35 19.4844V33.5C35 34.0312 34.7969 34.5 34.3906 34.9062C33.9844 35.3125 33.5156 35.5156 32.9844 35.5156H22.0156C21.4844 35.5156 21.0156 35.3125 20.6094 34.9062C20.2031 34.5 20 34.0312 20 33.5V19.4844C20 18.9531 20.2031 18.5 20.6094 18.125C21.0156 17.7188 21.4844 17.5156 22.0156 17.5156H32.9844ZM29.9844 13.4844V15.5H17.9844V29.5156H16.0156V15.5C16.0156 14.9688 16.2031 14.5 16.5781 14.0938C16.9844 13.6875 17.4531 13.4844 17.9844 13.4844H29.9844Z"
+                                    fill="#2F80EC"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                    <div class="payment__card payment__card--uzcard">
+                    <div class="payment__card-header">
+                        <div
+                            style="display: flex;align-items: center;justify-content: space-between;margin-bottom: 10px;">
+                            <span class="payment__card-type">Humo<img src="./images/humo.webp" alt="uzcard" width="30" height="23"
+                                    class="visa"></span>
+                        </div>
+                    </div>
+                    <div class="payment__card-bottom">
+                        <div class="payment__card-left">
+                            <div class="payment__card-number">9800 0101 1060 2116</div>
+                            <div class="payment__card-name">SATTAROVA ZILOLAXON</div>
+                        </div>
+                        <button class="payment__card-right copy">
+                            <svg width="50" height="51" viewBox="0 0 50 51" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_21_546" fill="white">
+                                    <path
+                                        d="M0 25.5C0 11.6929 11.1929 0.5 25 0.5V0.5C38.8071 0.5 50 11.6929 50 25.5V25.5C50 39.3071 38.8071 50.5 25 50.5V50.5C11.1929 50.5 0 39.3071 0 25.5V25.5Z">
+                                    </path>
+                                </mask>
+                                <path
+                                    d="M0 25.5C0 11.6929 11.1929 0.5 25 0.5V0.5C38.8071 0.5 50 11.6929 50 25.5V25.5C50 39.3071 38.8071 50.5 25 50.5V50.5C11.1929 50.5 0 39.3071 0 25.5V25.5Z"
+                                    fill="#FAFAFA"></path>
+                                <path
+                                    d="M25 50.5V49.5C11.7452 49.5 1 38.7548 1 25.5H0H-1C-1 39.8594 10.6406 51.5 25 51.5V50.5ZM50 25.5H49C49 38.7548 38.2548 49.5 25 49.5V50.5V51.5C39.3594 51.5 51 39.8594 51 25.5H50ZM25 0.5V1.5C38.2548 1.5 49 12.2452 49 25.5H50H51C51 11.1406 39.3594 -0.5 25 -0.5V0.5ZM25 0.5V-0.5C10.6406 -0.5 -1 11.1406 -1 25.5H0H1C1 12.2452 11.7452 1.5 25 1.5V0.5Z"
+                                    fill="#CCCCCC" mask="url(#path-1-inside-1_21_546)"></path>
+                                <rect x="8" y="11.5" width="36" height="26" rx="13" fill="#EBF2FF"></rect>
+                                <path
+                                    d="M32.9844 33.5V19.4844H22.0156V33.5H32.9844ZM32.9844 17.5156C33.5156 17.5156 33.9844 17.7188 34.3906 18.125C34.7969 18.5 35 18.9531 35 19.4844V33.5C35 34.0312 34.7969 34.5 34.3906 34.9062C33.9844 35.3125 33.5156 35.5156 32.9844 35.5156H22.0156C21.4844 35.5156 21.0156 35.3125 20.6094 34.9062C20.2031 34.5 20 34.0312 20 33.5V19.4844C20 18.9531 20.2031 18.5 20.6094 18.125C21.0156 17.7188 21.4844 17.5156 22.0156 17.5156H32.9844ZM29.9844 13.4844V15.5H17.9844V29.5156H16.0156V15.5C16.0156 14.9688 16.2031 14.5 16.5781 14.0938C16.9844 13.6875 17.4531 13.4844 17.9844 13.4844H29.9844Z"
+                                    fill="#2F80EC"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                     <div class="payment__card payment__card--uzcard">
+                    <div class="payment__card-header">
+                        <div
+                            style="display: flex;align-items: center;justify-content: space-between;margin-bottom: 10px;">
+                            <span class="payment__card-type">Visa<img src="./images/visa.webp" alt="uzcard" width="30" height="23"
+                                    class="visa"></span>
+                        </div>
+                    </div>
+                    <div class="payment__card-bottom">
+                        <div class="payment__card-left">
+                            <div class="payment__card-number">4466 1489 2288 4529</div>
+                            <div class="payment__card-name">SATTAROVA ZILOLAXON</div>
+                        </div>
+                        <button class="payment__card-right copy">
+                            <svg width="50" height="51" viewBox="0 0 50 51" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_21_546" fill="white">
+                                    <path
+                                        d="M0 25.5C0 11.6929 11.1929 0.5 25 0.5V0.5C38.8071 0.5 50 11.6929 50 25.5V25.5C50 39.3071 38.8071 50.5 25 50.5V50.5C11.1929 50.5 0 39.3071 0 25.5V25.5Z">
+                                    </path>
+                                </mask>
+                                <path
+                                    d="M0 25.5C0 11.6929 11.1929 0.5 25 0.5V0.5C38.8071 0.5 50 11.6929 50 25.5V25.5C50 39.3071 38.8071 50.5 25 50.5V50.5C11.1929 50.5 0 39.3071 0 25.5V25.5Z"
+                                    fill="#FAFAFA"></path>
+                                <path
+                                    d="M25 50.5V49.5C11.7452 49.5 1 38.7548 1 25.5H0H-1C-1 39.8594 10.6406 51.5 25 51.5V50.5ZM50 25.5H49C49 38.7548 38.2548 49.5 25 49.5V50.5V51.5C39.3594 51.5 51 39.8594 51 25.5H50ZM25 0.5V1.5C38.2548 1.5 49 12.2452 49 25.5H50H51C51 11.1406 39.3594 -0.5 25 -0.5V0.5ZM25 0.5V-0.5C10.6406 -0.5 -1 11.1406 -1 25.5H0H1C1 12.2452 11.7452 1.5 25 1.5V0.5Z"
+                                    fill="#CCCCCC" mask="url(#path-1-inside-1_21_546)"></path>
+                                <rect x="8" y="11.5" width="36" height="26" rx="13" fill="#EBF2FF"></rect>
+                                <path
+                                    d="M32.9844 33.5V19.4844H22.0156V33.5H32.9844ZM32.9844 17.5156C33.5156 17.5156 33.9844 17.7188 34.3906 18.125C34.7969 18.5 35 18.9531 35 19.4844V33.5C35 34.0312 34.7969 34.5 34.3906 34.9062C33.9844 35.3125 33.5156 35.5156 32.9844 35.5156H22.0156C21.4844 35.5156 21.0156 35.3125 20.6094 34.9062C20.2031 34.5 20 34.0312 20 33.5V19.4844C20 18.9531 20.2031 18.5 20.6094 18.125C21.0156 17.7188 21.4844 17.5156 22.0156 17.5156H32.9844ZM29.9844 13.4844V15.5H17.9844V29.5156H16.0156V15.5C16.0156 14.9688 16.2031 14.5 16.5781 14.0938C16.9844 13.6875 17.4531 13.4844 17.9844 13.4844H29.9844Z"
+                                    fill="#2F80EC"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <p class="payment__step">2. To'lovingiz muvaffaqiyatli amalga oshganini tasdiqlovchi rasmni saqlab oling
+                    (screenshot).</p>
+                <p class="payment__step">3. To'lovingiz rasmini yuklang va <b>davom etish</b> tugmasini bosing.</p>
+                <form id="paymentForm">
+                    <input type="file" id="chek" name="chek" accept=".pdf,.png,.jpg,.jpeg" hidden />
+                    <label for="chek" class="uploadCheck">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="66" viewBox="0 0 54 66">
+                            <g>
+                                <path
+                                    d="M 3.86 63.09 C1.51,61.19 1.50,61.08 1.17,35.84 C0.80,8.16 1.33,4.08 5.54,2.16 C7.05,1.47 13.26,1.00 20.80,1.00 L 33.52 1.00 L 43.26 10.29 L 53.00 19.59 L 53.00 40.29 C53.00,59.67 52.87,61.13 51.00,63.00 C49.12,64.88 47.67,65.00 27.61,65.00 C8.05,65.00 6.02,64.84 3.86,63.09 ZM 49.96 60.07 C50.57,58.94 51.00,50.61 51.00,40.07 L 51.00 22.00 L 43.65 22.00 C33.94,22.00 32.65,20.71 32.65,10.98 L 32.65 4.00 L 19.36 4.00 C7.24,4.00 5.98,4.17 5.04,5.93 C3.49,8.82 3.64,59.24 5.20,60.80 C6.06,61.66 12.46,62.00 27.66,62.00 C47.67,62.00 48.99,61.88 49.96,60.07 ZM 41.70 12.22 L 35.00 5.52 L 35.00 11.14 C35.00,14.47 35.52,17.19 36.28,17.81 C37.43,18.77 46.86,19.90 47.95,19.21 C48.20,19.06 45.39,15.91 41.70,12.22 ZM 14.00 50.92 C14.00,48.08 14.38,46.97 15.25,47.27 C15.94,47.51 16.46,48.67 16.42,49.85 C16.34,51.92 16.73,52.00 27.17,52.00 L 38.00 52.00 L 38.00 49.50 C38.00,47.94 38.57,47.00 39.50,47.00 C40.58,47.00 41.00,48.11 41.00,51.00 L 41.00 55.00 L 27.50 55.00 L 14.00 55.00 L 14.00 50.92 ZM 26.00 37.83 L 26.00 31.65 L 23.68 33.83 C19.73,37.54 19.73,34.86 23.68,30.81 L 27.41 27.00 L 31.16 30.66 C35.19,34.59 35.40,37.67 31.39,33.90 L 29.00 31.65 L 29.00 37.83 C29.00,42.65 28.67,44.00 27.50,44.00 C26.33,44.00 26.00,42.65 26.00,37.83 Z"
+                                    fill="rgba(0,0,0,1)" />
+                            </g>
+                        </svg>
+                        Chek rasmini yuklang
+                    </label>
+                    <button type="submit" class="payment__btn">Davom etish</button>
+                </form>
+            </div>
+            <div class="payment__help">
+                <p class="payment__help-text">Yordam kerakmi? <br>
+                    Yordamchiga yozish</p>
+                <a href="https://t.me/dilshoda_kurbonova?text=Assalomu%20alaykum.%0AMen%20%22Rus%20tili%2040%20kunda%22%20kursiga%20yozilmoqchi%20edim." class="payment__btn payment__btn--admin">Adminga
+                    yozish</a>
+                <a href="tel:+998917893555"
+                    style="background-color: #21BE7B;border-color: #21BE7B; margin-top: 15px; display: flex;"
+                    class="payment__btn payment__btn--admin">+998 91 789 35 55</a>
+            </div>
+        </div>
+    </div>
+    <script defer src="./js/pay.js"></script>
+</body>
+
+</html>
