@@ -278,8 +278,9 @@ select {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: MontserratNormal, sans-serif;
+  font-family: MontserratSemiBold, sans-serif;
   font-size: 16px;
+  font-weight: 600;
   color: white;
   text-decoration: none;
   margin-left: auto;
