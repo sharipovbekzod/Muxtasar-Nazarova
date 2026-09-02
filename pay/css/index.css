@@ -52,8 +52,13 @@ body {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.title span{
-  color: #CA130C;
+.title .muted,
+.title span:not(.accent) {
+  color: #fff;
+}
+.title .accent {
+  color: #f5c76a;
+  text-shadow: 0 0 12px rgba(245, 199, 106, 0.35);
 }
 .main-plan {
   width: 100%;
