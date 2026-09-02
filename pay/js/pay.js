@@ -297,15 +297,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 const localData = safeJSONParse(localStorage.getItem("formData"), {});
 
 const TARIFFS = {
-  standart: { label: "Standart", uzs: 1_297_000 },
-  premium: { label: "Premium", uzs: 1_397_000 },
-  vip: { label: "VIP", uzs: 7_297_000 },
+  premium: { label: "Premium", uzs: 3_199_000 },
+  vip_online: { label: "VIP online", uzs: 3_599_000 },
+  vip_offline: { label: "VIP offline", uzs: 4_599_000 },
   // booking: { label: "Bron", uzs: 500_000 }, // kerak bo’lsa och
 };
 
-const typeKey = String(localData.type || "premium")
-  .trim()
-  .toLowerCase();
+const normalizeTypeKey = (value) =>
+  String(value || "premium")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/-+/g, "_");
+
+const typeKey = normalizeTypeKey(localData.type);
 const selectedTariff = TARIFFS[typeKey] ?? TARIFFS.premium;
 
 const paymentTariffEl = $(".payment__tariff");
