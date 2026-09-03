@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ommaviy oferta</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f5f5;
+        color: #111;
+      }
+
+      .page {
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 0 20px 60px;
+      }
+
+      .doc {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+        padding: 40px 44px 28px;
+        border: 1px solid rgba(17, 17, 17, 0.08);
+      }
+
+      .doc h1 {
+        text-align: center;
+        font-size: clamp(28px, 3vw, 42px);
+        line-height: 1.2;
+        font-weight: 700;
+        margin: 0 0 18px;
+        text-transform: uppercase;
+      }
+
+      .doc .sub {
+        text-align: center;
+        font-size: 20px;
+        margin: 0 0 28px;
+        font-weight: 500;
+      }
+
+      .title-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 18px;
+      }
+
+      .doc p,
+      .doc li,
+      .doc .block {
+        font-size: 16px;
+        line-height: 1.7;
+        margin: 0 0 12px;
+      }
+
+      .doc strong {
+        font-weight: 700;
+      }
+
+      .doc h2 {
+        font-size: 17px;
+        margin: 26px 0 8px;
+        font-weight: 700;
+      }
+
+      .doc ul {
+        margin: 0 0 10px 20px;
+        padding-left: 22px;
+      }
+
+      .doc .info-box {
+        border: 1px solid #cfcfcf;
+        border-radius: 12px;
+        background: #f7f7f7;
+        padding: 18px 20px;
+        margin: 26px 0 18px;
+      }
+
+      .doc .info-box strong {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 17px;
+      }
+
+      .doc .info-box p {
+        margin: 0;
+      }
+
+      .checkpoint {
+        margin-top: 26px;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 18px;
+        padding: 18px 20px 20px;
+      }
+
+      .price-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f4f4f4;
+        padding: 18px 20px;
+        border: 2px solid rgba(0,0,0,.8);
+        border-radius: 999px;
+        font-size: clamp(18px, 2vw, 40px);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 22px;
+      }
+
+      .price-box span {
+        display: inline-block;
+      }
+
+      .checkpoint-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin: 12px 0 22px;
+        font-size: clamp(18px, 2vw, 28px);
+        font-weight: 500;
+      }
+
+      .checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        border-radius: 10px;
+        background: #1d7de5;
+        border: 2px solid #1d7de5;
+        position: relative;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 2px rgba(255,255,255,.2);
+      }
+
+      .checkbox:checked::after {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 4px;
+        width: 9px;
+        height: 16px;
+        border: solid white;
+        border-width: 0 4px 4px 0;
+        transform: rotate(45deg);
+      }
+
+      .continue-btn {
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 16px;
+        background: #e22526;
+        color: white;
+        font-size: clamp(28px, 3vw, 52px);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        padding: 20px 18px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: transform 0.15s ease, opacity 0.15s ease;
+      }
+
+      .continue-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .continue-btn:not(:disabled):hover {
+        transform: translateY(-1px);
+      }
+
+      @media (max-width: 640px) {
+        .doc {
+          padding: 24px 18px 20px;
+        }
+
+        .title-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .checkpoint-row {
+          align-items: flex-start;
+          font-size: 18px;
+        }
+
+        .continue-btn {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <main class="doc">
+        <h1>OMMAVIY OFERTA</h1>
+        <p class="sub">Pulik ta’lim xizmatlarini ko’rsatish shartnomasi</p>
+
+        <div class="title-row">
+          <span>Toshkent shahri</span>
+          <span>2026-YIL</span>
+        </div>
+
+        <p><strong>Mazkur hujjat “HAMMAGA BILIM” mas’uliyati cheklangan jamiyati (INN: 203366731)</strong> O‘zbekiston Respublikasi Fuqarolik kodeksining 367-moddasi va 369-moddasi 2-qismiga muvofiq xizmat ko‘rsatish shartnomasini (keyingi o‘rinlarda – Shartnoma) tuzish yuzasidan layoqatli bo‘lgan jismoniy shaxslarga (keyingi o‘rinlarda – Foydalanuvchi) rasmiy taklif hisoblanadi.</p>
+
+        <p>Foydalanuvchi (sayt xizmatlaridan foydalanishga tayyorligini bildirgan har qanday shaxs) tomonidan mazkur ofertada belgilangan harakatlarning bajarilishi, u tomonidan quyidagi shartlar so‘zsiz qabul qilinganligini anglatadi (Ofertaning aksepti). Ofertani aksept qilgan paytdan shartnoma tuzilgan hisoblanadi. Mazkur shartnomada to‘g‘ridan-to‘g‘ri nazarda tutilmagan barcha hollar, taraflar O‘zbekiston Respublikasi qonun hujjatlari va ish muomalasi odatlariga rioya qiladilar.</p>
+
+        <h2>2. AKSEPT TARTIBI</h2>
+        <p><strong>2.1.</strong> Mazkur Ofertaning aksepti <strong>https://muxtasar-nazarova.vercel.app/pay/</strong> sayti orqali avtorizatsiyadan o‘tib, pullik xizmatni olish orqali amalga oshiriladi.</p>
+        <p><strong>2.2.</strong> Mazkur Shartnomani tuzish orqali foydalanuvchi yetkazib beruvchiga amaldagi shaxsga doir ma'lumotlar to‘g‘risidagi qonun hujjatlari talablariga muvofiq o‘zining shaxsga doir ma'lumotlariga ishlov berishga muddatsiz roziligini beradi.</p>
+        <p><strong>2.3.</strong> Yetkazib beruvchi Foydalanuvchining shaxsga doir ma'lumotlarning maxfiyligi bo‘yicha O‘zbekiston Respublikasi amaldagi qonun hujjatlari talablariga muvofiq barcha zarur bo‘lgan choralarni ko‘rishini kafolatlaydi.</p>
+        <p><strong>2.4.</strong> Servisdan foydalanishdan avval Foydalanuvchi mazkur Ofertaning matni bilan to‘liq tanishib chiqishi zarur. Ofertaning shartlari bilan to‘liq yoki qisman norozi bo‘lsangiz, servisdan foydalanishdan bosh tortishingiz zarur.</p>
+
+        <h2>3. SHARTNOMA PREDMETI</h2>
+        <p><strong>3.1.</strong> Yetkazib Beruvchi Foydalanuvchiga qo'shimcha professional dastur bo'yicha treninglar, seminarlar, ma'ruzalar yoki ta'limga oid o'quv xizmatlarini taqdim etadi.</p>
+        <p><strong>3.2.</strong> Xizmatlarning batafsil tavsifi Saytda keltirilgan. Foydalanuvchi o'z xohishiga ko'ra xizmatlarni tanlaydi va Yetkazib Beruvchi ularga kirish va taklif shartnomasini qabul qilish orqali treningdan o'tish istagi to'g'risida ma'lumot beradi.</p>
+        <p><strong>3.3.</strong> Xizmatlarni taqdim etishning bir qismi sifatida Yetkazib Beruvchining majburiyati Foydalanuvchiga kirish imkoniyatini taqdim etishdan iborat.</p>
+        <p><strong>3.9.</strong> Xizmatlar Internet orqali Sayt va uning asosida yaratilgan subdomenlar, shuningdek YouTube, Telegram xizmati va Yetkazib Beruvchining ixtiyoriga ko'ra boshqa ijtimoiy tarmoq va texnik vositalar yordamida taqdim etiladi.</p>
+        <p><strong>3.10.</strong> Foydalanuvchi taklif shartnomasini tuzishdan oldin u xizmatlar ro'yxati, shartlari va tartibi bo'yicha barcha to'liq ma'lumotlarni olganligini tasdiqlaydi.</p>
+
+        <h2>4. XIZMATLARNI TO‘LASH</h2>
+        <p><strong>4.1.</strong> Taklif shartnomasi bo'yicha Xizmatlarning narxi Foydalanuvchi tanlagan Xizmatlarning turi va formatiga bog'liq. Xizmatlarning narxi haqida ma'lumot Saytda joylashtirilgan.</p>
+        <p><strong>4.2.</strong> Oferta shartnomasini qabul qilgunga qadar Yetkazib Beruvchi bir tomonlama tartibda ko'rsatilgan xizmatlar uchun narxlarni o'zgartirish huquqiga ega.</p>
+        <p><strong>4.5.</strong> Foydalanuvchi tanlangan Xizmatga kirish huquqidan foydalangan bo'lsa, kelajakda pullik Xizmatning qiymati qaytarilmaydi. Foydalanuvchi kurs davomida mashqlarni bajarish orqali foyda yoki natija ololmagan taqdirda, pul to’langandan keyin 30 kun ichida ariza bilan murojaat qilishi mumkin.</p>
+
+        <h2>5. HISOB KITOB TARTIBI</h2>
+        <p><strong>5.1.</strong> Oferta shartnomasi bo'yicha xizmatlar uchun to'lov 100% oldindan to'lash tartibida amalga oshiriladi.</p>
+        <p><strong>5.2.</strong> To'lov usullari: “PAYME” ilovasi yoki Yetkazib Beruvchi tomonidan belgilangan boshqa elektron to‘lov tizimlari orqali amalga oshiriladi.</p>
+        <p><strong>5.4.</strong> Xizmat Yetkazib Beruvchining hisob raqamiga Xizmatning to'liq qiymati miqdorida mablag' kelib tushgan paytdan e'tiboran to'langan hisoblanadi.</p>
+        <p><strong>5.5.</strong> Tanlangan Xizmat narxidan kam miqdorda mablag‘ kelib tushgan taqdirda, taklif qabul qilinmagan deb hisoblanadi va Shartnoma tuzilmaydi.</p>
+
+        <h2>6. XIZMATLARNI TAQDIM ETISH SHARTLARI</h2>
+        <p><strong>6.1.</strong> Xizmatlarni ko'rsatish shartlari, agar o'quv dasturining davomiyligi bilan boshqacha tartib belgilanmagan bo'lsa, Xizmatlar uchun to'lov amalga oshirilgan kundan boshlab 3 oydan oshmasligi kerak.</p>
+        <p><strong>6.2.</strong> Agar mijoz ushbu moddaning 6.1-bandida ko'rsatilgan muddatda treningdan o'tish uchun xizmatlardan foydalanishga ulgurmagan bo'lsa, Yetkazib Beruvchi Xizmatlardan foydalanish muddatini uzaytirish huquqiga ega.</p>
+
+        <h2>7. TARAFLAR MAJBURIYATLARI</h2>
+        <p><strong>7.1.</strong> Foydalanuvchi xizmatlarni tanlash va to'lash, kerakli vositalar va Internet ulanishiga ega bo'lish, jadvalga rioya qilish, ma'lumotlarni himoya qilish va boshqa majburiyatlarni o'z zimmasiga oladi.</p>
+        <p><strong>7.2.</strong> Foydalanuvchi mazkur ofertaning talablarini bajaradi, servisga ulanuvchi vositaning axborot xavfsizligini mustaqil ravishda ta'minlaydi, “PAYME” to‘lov servislaridan noqonuniy maqsadlarda foydalanmaydi.</p>
+        <p><strong>7.4.</strong> Yetkazib Beruvchi Saytdagi tavsif va taklif shartnomasiga muvofiq xizmatlarning to'g'ri ko'rsatilishini tashkil etadi va Foydalanuvchining Xizmatlarga muvaffaqiyatli kirishi uchun shart-sharoitlarni yaratadi.</p>
+
+        <h2>8. TARAFLARNING JAVOBGARLIGI</h2>
+        <p><strong>8.1.</strong> Taraflar Oferta shartnomasi bo'yicha o'z majburiyatlarini bajarmaganliklari yoki lozim darajada bajarmaganliklari uchun O‘zbekiston Respublikasi qonunchiligiga muvofiq javobgar bo'ladilar.</p>
+        <p><strong>8.2.</strong> Yetkazib Beruvchi Yetkazib Beruvchiga bog'liq bo'lmagan sabablarga ko'ra paydo bo'lgan Foydalanuvchining tanlangan Xizmatdan foydalana olmasligi uchun javobgar emas.</p>
+        <p><strong>8.3.</strong> Yetkazib beruvchi xizmatlarning Foydalanuvchining talablariga muvofiq emasligi, shuningdek Foydalanuvchi tomonidan xizmatlarni sub'ektiv baholash uchun javobgar bo'lmaydi.</p>
+
+        <h2>9. SHARTNOMANI BEKOR QILISH</h2>
+        <p><strong>9.1.</strong> Oferta shartnomasi Taraflarning kelishuvi bilan yoki qonun hujjatlarida nazarda tutilgan asoslar bo'yicha bekor qilinishi mumkin.</p>
+        <p><strong>9.3.</strong> Foydalanuvchi “PAYME” to‘lov servislaridagi akkauntini o‘chirib, mazkur shartnomani har qanday vaqtda bajarmaslikka haqli.</p>
+
+        <h2>10. KELISHMOVCHILIKLARNI KO‘RIB CHIQISH TARTIBI</h2>
+        <p><strong>10.1.</strong> Oferta shartnomasidan kelib chiqadigan nizolarni sudgacha hal qilish bo'yicha da'vo tartibi Taraflar uchun majburiydir.</p>
+        <p><strong>10.5.</strong> Oferta shartnomasidan kelib chiqadigan nizolar O‘zbekiston Respublikasining amaldagi qonunchiligiga muvofiq sudda hal qilinadi.</p>
+
+        <h2>11. FAVQULODDA VAZIYATLAR</h2>
+        <p><strong>11.1.</strong> Taraflar oferta shartnomasi bo'yicha majburiyatlarni to'liq yoki qisman bajarmaganlik uchun javobgarlikdan ozod qilinadilar, agar majburiyatlarning bajarilmasligi favqulodda holatlar natijasida yuzaga kelgan bo'lsa.</p>
+
+        <h2>12. BOSHQA SHARTLAR</h2>
+        <p><strong>12.1.</strong> To‘g‘ridan-to‘g‘ri shartnomada nazarda tutilmagan har bir narsada taraflar O‘zbekiston Respublikasining amaldagi qonunchiligini va biznes aylanmalarini boshqaradilar.</p>
+        <p><strong>12.2.</strong> Ushbu taklifni qabul qilib, foydalanuvchi ushbu shartnomaning barcha shartlarini so‘zsiz qabul qilganligini tasdiqlaydi va uni bajarishni o‘z zimmasiga oladi.</p>
+        <p><strong>12.5.</strong> Shaxsiy ma'lumotlarni qabul qilish va qayta ishlashda taraflar O‘zbekiston Respublikasining shaxsiy ma'lumotlar bo'yicha qonun hujjatlariga rioya qilishni ta'minlaydi.</p>
+
+        
+      </main>
+    </div>
+  </body>
+</html>
